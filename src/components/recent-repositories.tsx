@@ -13,8 +13,9 @@ export function RecentRepositories({
 }: RecentRepositoriesProps) {
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-serif font-normal tracking-tight text-gray-900 pb-2 border-b border-gray-100">
-        Recent Repositories
+      <h2 className="text-3xl font-serif font-normal tracking-tight text-gray-900 pb-2 relative inline-block">
+        <span className="relative z-10">Recent Repos</span>
+        <span className="absolute bottom-0 left-0 w-full h-[0.2em] bg-blue-300 opacity-50 transform -skew-x-6"></span>
       </h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {repos.map((repo) => (

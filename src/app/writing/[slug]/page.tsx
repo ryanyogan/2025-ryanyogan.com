@@ -1,19 +1,21 @@
 import { getWritingPost, getWritingPosts } from "@/lib/writing";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import { unstable_cacheLife as cacheLife } from "next/cache";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
+  "use cache";
+  cacheLife("days");
+
   const posts = await getWritingPosts();
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
 
-export async function generateMetadata(
-  props: {
-    params: Promise<{ slug: string }>;
-  }
-) {
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>;
+}) {
   const params = await props.params;
   const post = await getWritingPost(params.slug);
   if (!post) return {};
@@ -24,11 +26,12 @@ export async function generateMetadata(
   };
 }
 
-export default async function WritingPost(
-  props: {
-    params: Promise<{ slug: string }>;
-  }
-) {
+export default async function WritingPost(props: {
+  params: Promise<{ slug: string }>;
+}) {
+  "use cache";
+  cacheLife("days");
+
   const params = await props.params;
   const post = await getWritingPost(params.slug);
 

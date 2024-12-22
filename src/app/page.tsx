@@ -12,14 +12,14 @@ export default async function Home() {
       <div className="space-y-24">
         <section className="space-y-6">
           <NameTitle />
-          <p className="text-lg text-gray-700 leading-relaxed max-w-2xl font-sans">
+          <p className="text-lg text-slate-800 leading-relaxed max-w-2xl font-sans">
             I'm passionate about crafting exceptional user experiences,
             developing rock-solid distributed services, and nurturing dynamic
             team development.
           </p>
           <Link
             href="/about"
-            className="inline-block text-sm text-gray-900 hover:text-gray-600 transition-colors font-sans link-underline"
+            className="inline-block text-sm text-black hover:text-gray-600 transition-colors font-sans link-underline"
           >
             More about me
           </Link>

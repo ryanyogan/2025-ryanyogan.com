@@ -44,10 +44,10 @@ export function RecentWriting() {
               <time className="text-xs text-slate-500 font-sans block">
                 {post.date}
               </time>
-              <h3 className="text-xl font-sans tracking-tight text-black group-hover:text-gray-600 transition-colors line-clamp-2">
+              <h3 className="text-xl font-serif font-base tracking-tight text-black group-hover:text-gray-600 transition-colors line-clamp-2">
                 {post.title}
               </h3>
-              <p className="text-base text-slate-700 leading-relaxed font-sans line-clamp-3">
+              <p className="text-base text-gray-700 leading-relaxed font-sans line-clamp-3">
                 {post.excerpt}
               </p>
             </Link>

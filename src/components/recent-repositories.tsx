@@ -23,10 +23,10 @@ export function RecentRepositories({
             href={repo.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors p-4 group"
+            className="block bg-gray-300/10 rounded-lg hover:bg-gray-100 transition-colors p-4 group"
           >
             <div className="flex justify-between items-start">
-              <h3 className="text-base font-serif font-normal text-gray-900 group-hover:text-gray-600 transition-colors line-clamp-1">
+              <h3 className="text-base font-sans font-normal text-gray-900 group-hover:text-gray-600 transition-colors line-clamp-1">
                 {repo.name}
               </h3>
               <ArrowUpRight className="w-4 h-4 text-gray-400 group-hover:text-gray-600 flex-shrink-0" />

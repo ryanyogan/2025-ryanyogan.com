@@ -23,7 +23,7 @@ export default function RootLayout({
           <main className="sm:mt-16 mt-4 mb-24">
             <div className="container-wide">
               <div className="space-y-24">
-                <div className="space-y-6">
+                <div className="space-y-8">
                   <NameTitle />
                   {children}
                 </div>

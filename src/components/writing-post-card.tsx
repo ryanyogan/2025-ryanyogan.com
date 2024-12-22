@@ -11,7 +11,7 @@ interface WritingPostCardProps {
 
 export function WritingPostCard({ post }: WritingPostCardProps) {
   return (
-    <article className="group">
+    <article className="group border-b border-gray-200 pb-4">
       <Link href={`/writing/${post.slug}`} className="block space-y-2">
         <h2 className="text-xl font-serif font-normal tracking-tight text-gray-900 group-hover:text-gray-600 transition-colors line-clamp-2">
           {post.title}

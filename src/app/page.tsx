@@ -8,11 +8,11 @@ export default async function Home() {
 
   return (
     <div className="space-y-12">
-      <section>
-        <p className="text-lg text-slate-800 leading-relaxed max-w-2xl font-sans">
+      <section className="space-y-2">
+        <p className="text-base text-gray-700 leading-relaxed max-w-2xl font-sans">
           As an Engineering Leader and Software Developer. I'm passionate about
           crafting exceptional user experiences, developing rock-solid
-          distributed services, and nurturing a dynamic 🤝 team development.
+          distributed services, and nurturing a dynamic team development.
         </p>
         <Link
           href="/about"

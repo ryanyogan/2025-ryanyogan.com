@@ -6,28 +6,32 @@ const posts = [
     excerpt:
       "Journaling, a hidden remix course, can drizzle with my love of prisma, and the hunt for memory.",
     date: "2024/04/28",
-    href: "/writing/journals-drizzle-remix",
+    href: "https://yogan.dev",
+    slug: "the-writing-of-an-adhd-developer",
   },
   {
     title: "The writing of an ADHD developer",
     excerpt:
       "Before we start 2024, let's have a funny look at 2023. This is more filler text because the UI wants it.",
     date: "2024/02/21",
-    href: "/writing/adhd-developer",
+    href: "https://yogan.dev",
+    slug: "the-writing-of-an-adhd-developer",
   },
   {
     title: "Journal, Drizzle, Remix Learn'n",
     excerpt:
       "Journaling, a hidden remix course, can drizzle with my love of prisma, and the hunt for memory.",
-    date: "2024/04/28",
-    href: "/writing/journal-drizzle-remix",
+    date: "2024/04/29",
+    href: "https://yogan.dev",
+    slug: "the-writing-of-an-adhd-developer",
   },
   {
     title: "The writing of an ADHD developer",
     excerpt:
       "Before we start 2024, let's have a funny look at 2023. This is more filler text because the UI wants it.",
-    date: "2024/02/21",
-    href: "/writing/adhd2-developer",
+    date: "2024/02/24",
+    href: "https://yogan.dev",
+    slug: "the-writing-of-an-adhd-developer",
   },
 ];
 
@@ -39,7 +43,7 @@ export function RecentWriting() {
       </h2>
       <div className="grid md:grid-cols-2 md:col-span-full gap-10">
         {posts.map((post) => (
-          <WritingPostCard key={post.href} post={post} />
+          <WritingPostCard key={post.date} post={post} />
         ))}
       </div>
     </div>

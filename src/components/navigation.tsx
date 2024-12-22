@@ -3,19 +3,9 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 
 export function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const links = [
     { href: "/", label: "Home" },
@@ -25,18 +15,14 @@ export function Navigation() {
   ];
 
   return (
-    <nav
-      className={`py-4 transition-all duration-200 z-50 ${
-        isScrolled ? "bg-white shadow-sm" : ""
-      }`}
-    >
-      <div className="max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ul className="flex justify-end items-center gap-8">
+    <nav className={`py-4 transition-all duration-200 z-50`}>
+      <div className="mx-auto px-0 sm:px-6 lg:px-8">
+        <ul className="flex justify-center items-center gap-8">
           {links.map(({ href, label }) => (
             <li key={href}>
               <Link
                 href={href}
-                className="relative py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors font-sans"
+                className="relative py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors font-sans"
               >
                 {pathname === href && (
                   <motion.div

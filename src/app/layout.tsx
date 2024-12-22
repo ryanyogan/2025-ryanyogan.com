@@ -1,15 +1,9 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 
-import { Navigation } from "@/components/navigation";
+import { NameTitle } from "@/components/name-title";
 import "@/styles/globals.css";
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-});
 
 export const metadata = {
   title: "Ryan Yogan | Engineering Leader & Developer",
@@ -23,11 +17,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${GeistSans.className}`}>
       <body className="font-sans antialiased bg-white text-gray-900">
         <div className="max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Navigation />
-          <main className="mt-16 mb-24">{children}</main>
+          <main className="sm:mt-16 mt-4 mb-24">
+            <div className="container-wide">
+              <div className="space-y-24">
+                <div className="space-y-6">
+                  <NameTitle />
+                  {children}
+                </div>
+              </div>
+            </div>
+          </main>
         </div>
         <Analytics />
         <SpeedInsights />

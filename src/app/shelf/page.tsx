@@ -12,28 +12,23 @@ export default async function ShelfPage() {
   const [repos, languages] = await Promise.all([getAllRepos(), getLanguages()]);
 
   return (
-    <div className="container-wide">
-      <div className="space-y-8">
-        <header>
-          <h1 className="text-3xl sm:text-4xl font-serif font-normal tracking-tight mb-4">
-            Tech Shelf
-          </h1>
-          <p className="text-base text-gray-700 leading-relaxed max-w-2xl font-sans">
-            Dive into my GitHub projects and discover the technologies I work
-            with most frequently.
-          </p>
-        </header>
+    <>
+      <header>
+        <p className="text-base text-gray-700 leading-relaxed max-w-2xl font-sans">
+          Dive into my GitHub projects and discover the technologies I work with
+          most frequently.
+        </p>
+      </header>
 
-        <section className="space-y-6">
-          <h2 className="text-2xl font-serif font-normal tracking-tight text-gray-900">
-            Languages & Technologies
-          </h2>
-          <Suspense fallback={<LanguageFilterSkeleton />}>
-            <LanguageFilter languages={languages} repos={repos} />
-          </Suspense>
-        </section>
-      </div>
-    </div>
+      <section className="space-y-6">
+        <h2 className="text-2xl font-serif font-normal tracking-tight text-gray-900">
+          Languages & Technologies
+        </h2>
+        <Suspense fallback={<LanguageFilterSkeleton />}>
+          <LanguageFilter languages={languages} repos={repos} />
+        </Suspense>
+      </section>
+    </>
   );
 }
 

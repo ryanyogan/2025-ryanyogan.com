@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { WritingPostCard } from "./writing-post-card";
 
 const posts = [
   {
@@ -39,19 +39,7 @@ export function RecentWriting() {
       </h2>
       <div className="grid md:grid-cols-2 md:col-span-full gap-10">
         {posts.map((post) => (
-          <article key={post.href} className="group pb-4">
-            <Link href={post.href} className="block space-y-2">
-              <time className="text-xs text-slate-500 font-sans block">
-                {post.date}
-              </time>
-              <h3 className="text-xl font-serif font-base tracking-tight text-black group-hover:text-gray-600 transition-colors line-clamp-2">
-                {post.title}
-              </h3>
-              <p className="text-base text-gray-700 leading-relaxed font-sans line-clamp-3">
-                {post.excerpt}
-              </p>
-            </Link>
-          </article>
+          <WritingPostCard key={post.href} post={post} />
         ))}
       </div>
     </div>

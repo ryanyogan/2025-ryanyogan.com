@@ -13,6 +13,11 @@ export default function AboutPage() {
         </h2>
         <div className="prose prose-sm">
           <p>
+            This is all Chat Gippity nonsense because you came when I decided I
+            no longer want someone elses template and I am making my own. A day
+            later and I am still playing with fonts... yay!
+          </p>
+          <p>
             With over a decade of experience in software development, I've had
             the privilege of working on a wide range of projects and
             technologies. My passion lies in creating intuitive, efficient, and

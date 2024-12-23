@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <div className="space-y-20">
       <section className="space-y-2">
-        <h2 className="text-2xl font-serif font-normal tracking-tight text-gray-900">
+        <h2 className="text-3xl font-serif font-normal tracking-tight text-gray-900">
           Hello I'm Ryan,
         </h2>
         <p className="text-base text-gray-700 leading-relaxed max-w-5xl font-sans">

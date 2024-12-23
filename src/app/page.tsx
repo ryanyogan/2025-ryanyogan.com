@@ -1,20 +1,24 @@
 import { RecentRepositories } from "@/components/recent-repositories";
 import { RecentWriting } from "@/components/recent-writing";
 import { getRecentRepos } from "@/lib/github";
+import { unstable_cacheLife as cacheLife } from "next/cache";
 import Link from "next/link";
 
 export default async function Home() {
+  "use cache";
+  cacheLife("hours");
+
   const { repos: recentRepos, totalCount } = await getRecentRepos(6);
 
   return (
     <div className="space-y-20">
       <section className="space-y-2">
         <h2 className="text-3xl font-serif font-normal tracking-tight text-gray-900">
-          Hello I'm Ryan,
+          Hello I&apos;m Ryan,
         </h2>
         <p className="text-base text-gray-700 leading-relaxed max-w-5xl font-sans">
-          As an Engineering Leader and Software Developer. I'm passionate about
-          crafting exceptional user experiences, developing rock-solid
+          As an Engineering Leader and Software Developer. I&apos;m passionate
+          about crafting exceptional user experiences, developing rock-solid
           distributed services, and nurturing a dynamic 🤝 team development.
           <br />
           <br />

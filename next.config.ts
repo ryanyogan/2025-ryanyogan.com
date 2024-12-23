@@ -1,35 +1,21 @@
-import rehypePrism from "@mapbox/rehype-prism";
-import nextMDX from "@next/mdx";
+import createMDX from "@next/mdx";
 import { NextConfig } from "next";
-import remarkGfm from "remark-gfm";
-
-const withMDX = nextMDX({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypePrism],
-  },
-});
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: import("next").NextConfig = {
   experimental: {
     ppr: true,
     dynamicIO: true,
+    mdxRs: true,
   },
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    // !! WARN !!
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
 } satisfies NextConfig;
 
+const withMDX = createMDX({});
 export default withMDX(nextConfig);

@@ -2,12 +2,12 @@ import { WritingPostCard } from "./writing-post-card";
 
 const posts = [
   {
-    title: "Journal, Drizzle, Remix Learn'n",
+    title: "AOC 2024 and Claude Learning",
     excerpt:
-      "Journaling, a hidden remix course, can drizzle with my love of prisma, and the hunt for memory.",
+      "Recenetly I have been using Claude, in conjunction with Advent of Code 2024, using a language I know and a new one to quickly learn!",
     date: "2024/04/28",
-    href: "https://yogan.dev",
-    slug: "the-writing-of-an-adhd-developer",
+    href: "/writing/aoc-and-claude-learning",
+    slug: "aoc-and-claude-learning",
   },
   {
     title: "The writing of an ADHD developer",

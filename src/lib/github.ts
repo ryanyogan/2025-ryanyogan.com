@@ -41,7 +41,7 @@ async function fetchAllRepos(): Promise<Repo[]> {
       const formattedRepos: Repo[] = repos.map((repo) => ({
         name: repo.name,
         description: repo.description,
-        language: repo.language,
+        language: repo.language ?? null,
         stars: repo.stargazers_count ?? 0,
         forks: repo.forks_count ?? 0,
         url: repo.html_url,
@@ -63,15 +63,18 @@ export const getAllRepos = cache(async (): Promise<Repo[]> => {
   return await fetchAllRepos();
 });
 
-export const getRecentRepos = cache(
-  async (count: number): Promise<{ repos: Repo[]; totalCount: number }> => {
-    const allRepos = await getAllRepos();
-    return {
-      repos: allRepos.slice(0, count),
-      totalCount: allRepos.length,
-    };
-  }
-);
+export const getRecentRepos = async (
+  count: number
+): Promise<{ repos: Repo[]; totalCount: number }> => {
+  "use cache";
+  cacheLife("hours");
+
+  const allRepos = await getAllRepos();
+  return {
+    repos: allRepos.slice(0, count),
+    totalCount: allRepos.length,
+  };
+};
 
 export const getLanguages = cache(async (): Promise<Language[]> => {
   const repos = await getAllRepos();

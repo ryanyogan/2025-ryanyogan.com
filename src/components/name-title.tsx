@@ -18,9 +18,9 @@ export function NameTitle() {
   return (
     <div className="flex flex-col sm:flex-row items-start justify-between sm:items-end sm:pb-4">
       <div className="relative inline-block">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-normal tracking-tight">
+        {/* <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-normal tracking-tight">
           {name}
-        </h1>
+        </h1> */}
       </div>
       <Navigation />
     </div>

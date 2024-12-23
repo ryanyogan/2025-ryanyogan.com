@@ -10,9 +10,9 @@ export default async function Home() {
     <div className="space-y-20">
       <section className="space-y-2">
         <h2 className="text-2xl font-serif font-normal tracking-tight text-gray-900">
-          Hi,
+          Hello I'm Ryan,
         </h2>
-        <p className="text-base text-gray-900 leading-relaxed max-w-5xl font-sans">
+        <p className="text-base text-gray-700 leading-relaxed max-w-5xl font-sans">
           As an Engineering Leader and Software Developer. I'm passionate about
           crafting exceptional user experiences, developing rock-solid
           distributed services, and nurturing a dynamic 🤝 team development.

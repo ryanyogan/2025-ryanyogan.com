@@ -9,9 +9,11 @@ export default async function Home() {
   return (
     <div className="space-y-12">
       <section className="space-y-2">
+        <h2 className="text-2xl font-serif font-normal tracking-tight text-gray-900">
+          Hi,
+        </h2>
         <p className="text-base text-gray-700 leading-relaxed max-w-2xl font-sans">
-          Hi, I'm Ryan. As an Engineering Leader and Software Developer. I'm
-          passionate about crafting exceptional user experiences, developing
+          I'm passionate about crafting exceptional user experiences, developing
           rock-solid distributed services, and nurturing a dynamic team
           development.
         </p>

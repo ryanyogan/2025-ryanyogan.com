@@ -13,6 +13,9 @@ export default async function ShelfPage() {
 
   return (
     <>
+      <h2 className="text-2xl font-serif font-normal tracking-tight text-gray-900">
+        Nerdy Stuff First
+      </h2>
       <header>
         <p className="text-base text-gray-700 leading-relaxed max-w-2xl font-sans">
           Dive into my GitHub projects and discover the technologies I work with

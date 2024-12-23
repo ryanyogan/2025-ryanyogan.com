@@ -12,6 +12,9 @@ export default async function WritingPage() {
 
   return (
     <>
+      <h2 className="text-2xl font-serif font-normal tracking-tight text-gray-900">
+        From time-to-time
+      </h2>
       <header>
         <p className="text-base text-gray-700 leading-relaxed max-w-2xl font-sans">
           Thoughts and musings on software development, leadership, and

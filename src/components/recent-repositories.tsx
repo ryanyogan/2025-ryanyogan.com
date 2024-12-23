@@ -16,24 +16,28 @@ export function RecentRepositories({
       <h2 className="text-3xl font-serif font-normal tracking-tight text-gray-900 pb-2 relative inline-block">
         <span className="relative z-10">Recent Repos</span>
       </h2>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
         {repos.map((repo) => (
           <Link
             key={repo.name}
             href={repo.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block bg-gray-300/10 rounded-lg hover:bg-gray-100 transition-colors p-4 group"
+            className="block rounded-lg transition-colors group"
           >
-            <div className="flex justify-between items-start">
-              <h3 className="text-base font-sans font-normal text-gray-900 group-hover:text-gray-600 transition-colors line-clamp-1">
+            <div className="flex justify-between items-center">
+              <h3 className="text-lg capitalize font-serif font-normal text-gray-900 group-hover:text-gray-600 transition-colors line-clamp-1">
                 {repo.name}
               </h3>
               <ArrowUpRight className="w-4 h-4 text-gray-400 group-hover:text-gray-600 flex-shrink-0" />
             </div>
-            {repo.description && (
+            {repo.description ? (
               <p className="mt-2 text-xs text-gray-600 font-sans line-clamp-2">
                 {repo.description}
+              </p>
+            ) : (
+              <p className="mt-2 text-xs text-gray-600 font-sans line-clamp-2">
+                No description provided
               </p>
             )}
             <div className="mt-3 flex items-center space-x-4 text-xs text-gray-500 font-sans">

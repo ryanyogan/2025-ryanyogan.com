@@ -10,7 +10,7 @@ export default async function Home() {
   const { repos: recentRepos, totalCount } = await getRecentRepos(6);
 
   return (
-    <div className="space-y-10">
+    <div className="sm:space-y-20 space-y-10">
       <section className="space-y-8">
         <h2 className="text-3xl font-serif font-normal tracking-tight text-gray-900">
           Hello I&apos;m Ryan,

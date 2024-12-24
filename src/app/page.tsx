@@ -1,18 +1,17 @@
 import { RecentRepositories } from "@/components/recent-repositories";
 import { RecentWriting } from "@/components/recent-writing";
 import { getRecentRepos } from "@/lib/github";
-import { unstable_cacheLife as cacheLife } from "next/cache";
 import Link from "next/link";
 
 export default async function Home() {
-  "use cache";
-  cacheLife("hours");
+  // "use cache";
+  // cacheLife("hours");
 
   const { repos: recentRepos, totalCount } = await getRecentRepos(6);
 
   return (
-    <div className="space-y-20">
-      <section className="space-y-2">
+    <div className="space-y-10">
+      <section className="space-y-8">
         <h2 className="text-3xl font-serif font-normal tracking-tight text-gray-900">
           Hello I&apos;m Ryan,
         </h2>

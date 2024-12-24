@@ -16,7 +16,7 @@ export function RecentRepositories({
       <h2 className="text-3xl font-serif font-normal tracking-tight text-gray-900 pb-2 relative inline-block">
         <span className="relative z-10">Recent Repos</span>
       </h2>
-      <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-12 md:grid-cols-2">
         {repos.map((repo) => (
           <Link
             key={repo.name}

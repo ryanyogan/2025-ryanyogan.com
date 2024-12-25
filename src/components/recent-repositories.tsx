@@ -12,11 +12,11 @@ export function RecentRepositories({
   totalCount,
 }: RecentRepositoriesProps) {
   return (
-    <div className="space-y-6">
-      <h2 className="text-3xl font-serif font-normal tracking-tight text-gray-900 pb-2 relative inline-block">
+    <div className="space-y-4">
+      <h2 className="text-3xl font-serif font-normal tracking-tight text-black pb-2 relative inline-block">
         <span className="relative z-10">Recent Repos</span>
       </h2>
-      <div className="grid gap-12 md:grid-cols-2">
+      <div className="grid gap-x-8 md:grid-cols-2 gap-y-6">
         {repos.map((repo) => (
           <Link
             key={repo.name}
@@ -26,13 +26,13 @@ export function RecentRepositories({
             className="block rounded-lg transition-colors group"
           >
             <div className="flex justify-between items-center">
-              <h3 className="text-lg capitalize font-serif font-normal text-gray-900 group-hover:text-gray-600 transition-colors line-clamp-1">
+              <h3 className="text-lg lowercase font-serif font-normal text-black group-hover:text-gray-600 transition-colors line-clamp-1">
                 {repo.name}
               </h3>
               <ArrowUpRight className="w-4 h-4 text-gray-400 group-hover:text-gray-600 flex-shrink-0" />
             </div>
             {repo.description ? (
-              <p className="mt-2 text-xs text-gray-600 font-sans line-clamp-2">
+              <p className="mt-2 text-sm text-gray-800 font-sans line-clamp-2 tracking-tight">
                 {repo.description}
               </p>
             ) : (
@@ -59,7 +59,7 @@ export function RecentRepositories({
           </Link>
         ))}
       </div>
-      <div className="text-center">
+      <div className="text-center pt-4">
         <Link
           href="/shelf"
           className="inline-block text-sm text-gray-900 hover:text-gray-600 transition-colors font-sans link-underline"

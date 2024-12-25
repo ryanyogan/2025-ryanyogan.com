@@ -17,7 +17,7 @@ export function WritingPostCard({ post }: WritingPostCardProps) {
         <h2 className="text-xl pb-3 font-serif font-normal tracking-tight text-gray-900 group-hover:text-gray-600 transition-colors line-clamp-2">
           {post.title}
         </h2>
-        <p className="text-base text-gray-700 leading-relaxed font-sans line-clamp-3">
+        <p className="text-base text-gray-700 tracking-tight font-sans line-clamp-3">
           {post.excerpt}
         </p>
       </Link>

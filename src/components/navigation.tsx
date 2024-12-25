@@ -23,6 +23,7 @@ export function Navigation() {
               <Link
                 href={href}
                 className="relative py-2 sm:text-sm text-xs text-gray-500 hover:text-gray-900 transition-colors font-sans"
+                prefetch
               >
                 {pathname === href && (
                   <motion.div

@@ -8,7 +8,7 @@ export default async function Home() {
   "use cache";
   cacheLife("hours");
 
-  const { repos: recentRepos, totalCount } = await getRecentRepos(6);
+  const { repos: recentRepos, totalCount } = await getRecentRepos(4);
 
   return (
     <div className="sm:space-y-20 space-y-10">

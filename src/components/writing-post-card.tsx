@@ -14,12 +14,12 @@ export function WritingPostCard({ post }: WritingPostCardProps) {
     <article className="group pb-6">
       <Link href={`/writing/${post.slug}`} className="flex flex-col">
         <time className="text-xs text-gray-400">{post.date}</time>
-        <h2 className="text-lg pb-3 font-sans font-normal tracking-tight text-gray-900 group-hover:text-gray-600 transition-colors line-clamp-2">
+        <h2 className="text-base pb-3 font-sans font-normal tracking-tight text-black underline underline-offset-2 group-hover:text-blue-600 transition-colors line-clamp-2">
           {post.title}
         </h2>
-        <div className="prose prose-sm">
-          <p>{post.excerpt}</p>
-        </div>
+        <p className="text-base text-gray-700 tracking-tighter">
+          {post.excerpt}
+        </p>
       </Link>
     </article>
   );

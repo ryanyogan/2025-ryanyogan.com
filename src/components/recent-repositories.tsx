@@ -26,17 +26,17 @@ export function RecentRepositories({
             className="block rounded-lg transition-colors group"
           >
             <div className="flex justify-between items-center">
-              <h3 className="text-lg lowercase font-sans font-normal text-black group-hover:text-gray-600 transition-colors line-clamp-1">
+              <h3 className="text-base lowercase font-sans font-normal text-black underline underline-offset-2 group-hover:text-blue-600 transition-colors line-clamp-1">
                 {repo.name}
               </h3>
-              <ArrowUpRight className="w-4 h-4 text-gray-400 group-hover:text-gray-600 flex-shrink-0" />
+              <ArrowUpRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 flex-shrink-0" />
             </div>
             {repo.description ? (
-              <p className="mt-2 text-sm text-gray-800 font-sans line-clamp-2 tracking-tight">
+              <p className="mt-2 text-base text-gray-700 font-sans line-clamp-2 tracking-tighter">
                 {repo.description}
               </p>
             ) : (
-              <p className="mt-2 text-xs text-gray-600 font-sans line-clamp-2">
+              <p className="mt-2 text-base text-gray-600 font-sans line-clamp-2">
                 No description provided
               </p>
             )}
@@ -62,7 +62,7 @@ export function RecentRepositories({
       <div className="text-center pt-6">
         <Link
           href="/shelf"
-          className="inline-block text-sm text-gray-900 hover:text-gray-600 transition-colors font-sans link-underline"
+          className="inline-block text-sm text-black hover:text-blue-600 transition-colors font-sans link-underline"
         >
           View all {totalCount} repositories
         </Link>

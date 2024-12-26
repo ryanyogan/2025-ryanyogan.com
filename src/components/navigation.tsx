@@ -22,13 +22,13 @@ export function Navigation() {
             <li key={href}>
               <Link
                 href={href}
-                className="relative py-2 sm:text-sm text-xs text-gray-500 hover:text-gray-900 transition-colors font-sans"
+                className="relative py-2 sm:text-sm text-xs text-gray-800 hover:text-gray-900 transition-colors font-sans"
                 prefetch
               >
                 {pathname === href && (
                   <motion.div
                     layoutId="underline"
-                    className="absolute left-0 right-0 h-px bottom-0 bg-gray-400"
+                    className="absolute left-0 right-0 h-px bottom-0 bg-gray-800"
                   />
                 )}
                 {label}

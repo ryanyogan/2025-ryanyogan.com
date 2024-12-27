@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-libre);
   --font-serif: var(--font-playfair);
 }
 
@@ -32,7 +32,7 @@
     @apply text-gray-900 hover:text-gray-600 transition-colors duration-200;
   }
   .link-underline {
-    @apply border-b border-black hover:border-blue-600 transition-colors duration-200;
+    @apply border-b border-gray-600 hover:border-blue-600 transition-colors duration-200;
   }
 }
 

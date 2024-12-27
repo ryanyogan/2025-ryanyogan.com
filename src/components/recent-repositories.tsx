@@ -26,7 +26,7 @@ export function RecentRepositories({
             className="block rounded-lg transition-colors group"
           >
             <div className="flex justify-between items-center">
-              <h3 className="text-base lowercase font-sans font-normal text-black underline underline-offset-2 group-hover:text-blue-600 transition-colors line-clamp-1">
+              <h3 className="text-base lowercase font-sans underline underline-offset-2 text-black group-hover:text-blue-600 transition-colors line-clamp-1">
                 {repo.name}
               </h3>
               <ArrowUpRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 flex-shrink-0" />

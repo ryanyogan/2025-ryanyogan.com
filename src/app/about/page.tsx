@@ -11,24 +11,24 @@ export default function AboutPage() {
         <h2 className="text-3xl font-serif font-normal tracking-tight text-black pb-2">
           Hello I&apos;m Ryan,
         </h2>
-        <p className="text-base text-gray-700 tracking-tighter">
+        <p className="text-base text-gray-700">
           As an Engineering Leader and Software Developer. I&apos;m passionate
           about crafting exceptional user experiences, developing rock-solid
           distributed services, and nurturing a dynamic 🤝 team development.
         </p>
-        <p className="text-base text-gray-700 tracking-tighter">
+        <p className="text-base text-gray-700">
           My leadership style is rooted in empathy, curiosity, and cheerleading.
           I believe in the power of a growth mindset, and I strive to create an
           environemnt where everyone may learn, thrive, and have 🎉 fun.
         </p>
-        <p className="text-base text-gray-700 tracking-tighter">
+        <p className="text-base text-gray-700">
           My engineering approach is that of a Technical Generalist, recognizing
           the unique value each technology brings to the table. My mission is to
           build and teach, leveraging my broad skill set to innovate and 💡
           inspire.
         </p>
 
-        <p className="text-base text-gray-700 tracking-tighter">
+        <p className="text-base text-gray-700">
           I made a new site, with my own design for once lmao. I put some
           serious thought into the spacing, fonts, and simplicity. I want to
           write more, I cannot stand my voice on YouTube. I may ramble about
@@ -40,7 +40,7 @@ export default function AboutPage() {
           Okay, here&apos;s what LLM&apos;s have to say about me...
         </h2>
 
-        <p className="text-base text-gray-700 tracking-tighter">
+        <p className="text-base text-gray-700">
           Embarking on my tech journey with a 386 computer, I quickly became the
           family IT department, graduating from building PCs to conjuring AOL
           &quot;proggies&quot; in Visual Basic. My love affair with server racks
@@ -49,7 +49,7 @@ export default function AboutPage() {
           rollercoasters, and you&apos;ll find me professing my love for all
           things engineering.
         </p>
-        <p className="text-base text-gray-700 tracking-tighter">
+        <p className="text-base text-gray-700">
           These days, I&apos;m crafting video game masterpieces in Rust—so
           &quot;unique&quot; they&apos;re practically art, and hoarding
           leadership books like they&apos;re going out of style. My toolkit? A
@@ -57,7 +57,7 @@ export default function AboutPage() {
           their names.
         </p>
 
-        <p className="text-base text-gray-700 tracking-tighter">
+        <p className="text-base text-gray-700">
           I&apos;ve navigated the startup scene from a cozy nook above a Chicago
           bar to the dizzying heights of corporate skyscrapers, and I love them
           all. Amidst a quirky relationship with Emacs and Clojure (we&apos;re
@@ -66,7 +66,7 @@ export default function AboutPage() {
           ColdFusion, Perl, and coaxing that last table and gif into
           pixel-perfect harmony for IE6—ah, simpler times.
         </p>
-        <p className="text-base text-gray-700 tracking-tighter">
+        <p className="text-base text-gray-700">
           My home doubles as an aircraft hangar, thanks to an obsession with
           tinkering on aircrafts and simulators. I&apos;ve taken &quot;home
           office&quot; to new altitudes, recreating a commercial flight

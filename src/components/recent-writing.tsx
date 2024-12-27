@@ -38,7 +38,7 @@ const posts = [
 export function RecentWriting() {
   return (
     <div className="space-y-6">
-      <h2 className="text-3xl font-serif font-normal tracking-tight text-black pb-2 relative inline-block">
+      <h2 className="sm:text-3xl text-2xl font-serif font-normal tracking-tight text-black pb-2 relative inline-block">
         <span className="relative z-10">Recent Writing</span>
       </h2>
       <div className="grid md:grid-cols-1 md:col-span-full gap-x-8">

@@ -13,7 +13,7 @@ export function RecentRepositories({
 }: RecentRepositoriesProps) {
   return (
     <div className="space-y-4">
-      <h2 className="text-3xl font-serif font-normal tracking-tight text-black pb-2 relative inline-block">
+      <h2 className="sm:text-3xl text-2xl font-serif font-normal tracking-tight text-black pb-2 relative inline-block">
         <span className="relative z-10">Recent Repos</span>
       </h2>
       <div className="grid gap-x-8 md:grid-cols-2 gap-y-6">
@@ -26,17 +26,17 @@ export function RecentRepositories({
             className="block rounded-lg transition-colors group"
           >
             <div className="flex justify-between items-center">
-              <h3 className="text-base lowercase font-sans underline underline-offset-2 text-black group-hover:text-blue-600 transition-colors line-clamp-1">
+              <h3 className="sm:text-base text-sm lowercase font-sans underline underline-offset-2 text-black group-hover:text-blue-600 transition-colors line-clamp-1">
                 {repo.name}
               </h3>
               <ArrowUpRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 flex-shrink-0" />
             </div>
             {repo.description ? (
-              <p className="mt-2 text-base text-gray-700 font-sans line-clamp-2 tracking-tighter">
+              <p className="mt-2 sm:text-base text-sm text-gray-700 font-sans line-clamp-2 tracking-tighter">
                 {repo.description}
               </p>
             ) : (
-              <p className="mt-2 text-base text-gray-600 font-sans line-clamp-2">
+              <p className="mt-2 sm:text-base text-sm text-gray-600 font-sans line-clamp-2">
                 No description provided
               </p>
             )}

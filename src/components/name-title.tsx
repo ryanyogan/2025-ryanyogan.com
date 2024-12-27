@@ -16,12 +16,7 @@ export function NameTitle() {
   const name = nameMapping[pathname] ?? "Ryan Yogan";
 
   return (
-    <div className="flex flex-row w-full items-start justify-between sm:items-end sm:pb-4">
-      <div className="relative inline-block">
-        {/* <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-normal tracking-tight">
-          {name}
-        </h1> */}
-      </div>
+    <div className="flex flex-row mx-auto sm:justify-end sm:pb-4">
       <Navigation />
     </div>
   );

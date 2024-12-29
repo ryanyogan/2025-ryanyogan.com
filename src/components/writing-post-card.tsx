@@ -11,13 +11,13 @@ interface WritingPostCardProps {
 
 export function WritingPostCard({ post }: WritingPostCardProps) {
   return (
-    <article className="group pb-6">
+    <article className="group pb-6 max-w-3xl">
       <Link href={`/writing/${post.slug}`} className="flex flex-col">
         <time className="text-xs text-gray-500">{post.date}</time>
-        <h2 className="text-base pb-2 font-sans font-semibold text-gray-800 group-hover:text-blue-600 transition-colors line-clamp-2">
+        <h2 className="text-lg font-serif font-medium group-hover:text-blue-600 transition-colors line-clamp-2 pb-1">
           {post.title}
         </h2>
-        <p className="text-base text-gray-800">{post.excerpt}</p>
+        <p className="text-base font-serif text-gray-700">{post.excerpt}</p>
       </Link>
     </article>
   );

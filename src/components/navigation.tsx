@@ -22,7 +22,7 @@ export function Navigation() {
             <li key={href}>
               <Link
                 href={href}
-                className="relative py-2 sm:text-sm text-xs text-gray-800 hover:text-gray-900 transition-colors font-sans"
+                className="relative py-2 sm:text-sm text-xs text-gray-600 hover:text-gray-900 transition-colors font-sans"
                 prefetch
               >
                 {pathname === href && (

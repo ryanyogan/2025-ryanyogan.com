@@ -2,7 +2,6 @@
 
 @theme {
   --font-sans: var(--font-inter);
-  --font-serif: var(--font-playfair);
 }
 
 @layer base {

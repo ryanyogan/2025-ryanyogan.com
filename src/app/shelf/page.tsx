@@ -1,5 +1,6 @@
 import { LanguageFilter } from "@/components/language-filter";
 import { Skeleton } from "@/components/ui/skeleton";
+import { WritingPostCard } from "@/components/writing-post-card";
 import { getAllRepos, getLanguages } from "@/lib/github";
 import { Suspense } from "react";
 
@@ -13,28 +14,28 @@ export default async function ShelfPage() {
 
   const leadershipMaterial = [
     {
-      name: "Peopleware: Productive Projects & Teams",
-      description:
+      title: "Peopleware: Productive Projects & Teams",
+      excerpt:
         "A book on the human side of software development, and how to manage and lead software projects.",
-      url: "https://www.amazon.com/Peopleware-Productive-Projects-Tom-DeMarco/dp/0932633439",
+      href: "https://www.amazon.com/Peopleware-Productive-Projects-Tom-DeMarco/dp/0932633439",
     },
     {
-      name: "Engineering Managment for the Rest of Us",
-      description:
+      title: "Engineering Managment for the Rest of Us",
+      excerpt:
         "This book isn't for the born leaders.  This book is for the rest of us.",
-      url: "https://www.engmanagement.dev/",
+      href: "https://www.engmanagement.dev/",
     },
     {
-      name: "Engineering Management Fundamentals 101",
-      description:
+      title: "Engineering Management Fundamentals 101",
+      excerpt:
         "Explore a career in software management with guidance from Netflix's Engineering Manager, Jem Young. Learn key motivations, challenges, and essential skills for effective leadership and meeting management, setting the stage for success in engineering management.",
-      url: "https://www.engmanagement.dev/",
+      href: "https://frontendmasters.com/courses/intro-management/",
     },
     {
-      name: "Enterprise Engineering Management 102",
-      description:
+      title: "Enterprise Engineering Management 102",
+      excerpt:
         "Learn to build and lead high-performing technical teams with insights from Netflix's Ryan Burgess. Learn to establish OKRs and KPIs, develop team charters, refine hiring processes, and build strong partnerships. Enhance your leadership skills!",
-      url: "https://frontendmasters.com/courses/engineering-management/",
+      href: "https://frontendmasters.com/courses/engineering-management/",
     },
   ];
 
@@ -44,27 +45,18 @@ export default async function ShelfPage() {
         <h2 className="sm:text-3xl text-2xl font-serif font-normal tracking-tight text-black pb-2">
           Books First.
         </h2>
-        <ul className="mt-4 space-y-2">
-          {leadershipMaterial.map((language) => (
-            <li key={language.name}>
-              <article className="group pb-4">
-                <a
-                  href={language.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col"
-                >
-                  <h2 className="sm:text-base text-sm pb-3 font-sans underline underline-offset-2 text-gray-800 group-hover:text-blue-600 transition-colors line-clamp-2">
-                    {language.name}
-                  </h2>
-                  <p className="sm:text-base text-sm text-gray-700">
-                    {language.description}
-                  </p>
-                </a>
-              </article>
-            </li>
-          ))}
-        </ul>
+        <div className="space-y-6">
+          <div className="grid md:grid-cols-2 md:col-span-full gap-x-8">
+            {leadershipMaterial.map((post) => (
+              <WritingPostCard
+                showDate={false}
+                useSlug={false}
+                key={post.href}
+                post={post}
+              />
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="space-y-4">

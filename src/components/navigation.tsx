@@ -16,13 +16,13 @@ export function Navigation() {
 
   return (
     <nav className={`py-4 transition-all duration-200 z-50`}>
-      <div className="mx-auto px-0 sm:px-6 lg:px-8">
+      <div className="mx-auto px-0">
         <ul className="flex justify-center items-center gap-8">
           {links.map(({ href, label }) => (
             <li key={href}>
               <Link
                 href={href}
-                className="relative py-2 sm:text-sm text-xs text-gray-600 hover:text-gray-900 transition-colors font-sans"
+                className="relative py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors font-sans"
                 prefetch
               >
                 {pathname === href && (

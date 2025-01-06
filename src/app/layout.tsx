@@ -19,12 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.className}`}>
-      <body className="font-sans bg-white antialiased text-gray-900">
-        <div className="max-w-3xl lg:max-w-4xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <main className="sm:mt-6 mt-4 mb-24">
+      <body className="font-sans bg-zinc-50 antialiased">
+        <div className="max-w-3xl mx-auto px-4">
+          <main className="mt-6 mb-24">
             <div className="container-wide">
               <div className="space-y-24">
-                <div className="sm:space-y-12 space-y-4">
+                <div className="space-y-12">
                   <NameTitle />
                   {children}
                 </div>

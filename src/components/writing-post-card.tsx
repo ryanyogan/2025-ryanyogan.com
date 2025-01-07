@@ -25,7 +25,7 @@ export function WritingPostCard({ post }: WritingPostCardProps) {
             {post.title}
           </h3>
         </div>
-        <p className="text-base font-sans text-zinc-800 dark:text-zinc-100 line-clamp-1 tracking-tight">
+        <p className="text-base font-sans text-zinc-800 dark:text-zinc-400 line-clamp-1 tracking-tight">
           {post.excerpt}
         </p>
       </Link>

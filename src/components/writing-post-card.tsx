@@ -21,7 +21,7 @@ export function WritingPostCard({ post }: WritingPostCardProps) {
           </time>
         )}
         <div className="flex justify-between items-center pb-1">
-          <h3 className="text-base font-sans font-medium text-blue-600 dark:text-blue-500 underline transition-colors line-clamp-1">
+          <h3 className="text-base font-sans font-medium text-blue-600 dark:text-blue-400 underline transition-colors line-clamp-1">
             {post.title}
           </h3>
         </div>

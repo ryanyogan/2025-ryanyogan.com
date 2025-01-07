@@ -9,7 +9,7 @@ interface RecentRepositoriesProps {
 export function RecentRepositories({ repos }: RecentRepositoriesProps) {
   return (
     <div className="space-y-4">
-      <h2 className="text-xl font-serif font-normal text-gray-800 pb-2 relative inline-block">
+      <h2 className="text-2xl font-serif font-normal text-gray-800 dark:text-zinc-400 pb-2 relative inline-block">
         <span className="relative z-10">Recent Projects</span>
       </h2>
       <div className="grid gap-x-8 gap-y-6">
@@ -22,12 +22,12 @@ export function RecentRepositories({ repos }: RecentRepositoriesProps) {
             className="block transition-colors group"
           >
             <div className="flex justify-between items-center">
-              <h3 className="text-base lowercase font-sans font-medium text-blue-600 underline group-hover:text-blue-800 transition-colors line-clamp-1">
+              <h3 className="text-base lowercase font-sans font-medium text-blue-600 dark:text-blue-300 underline group-hover:text-blue-800 transition-colors line-clamp-1">
                 {repo.name}
               </h3>
             </div>
             {repo.description ? (
-              <p className="mt-2 text-base text-zinc-800 font-serif line-clamp-1 tracking-tight">
+              <p className="mt-2 text-base text-zinc-800 dark:text-zinc-100 font-serif line-clamp-1 tracking-tight">
                 {repo.description}
               </p>
             ) : (

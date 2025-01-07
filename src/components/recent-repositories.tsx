@@ -22,7 +22,7 @@ export function RecentRepositories({ repos }: RecentRepositoriesProps) {
             className="block transition-colors group"
           >
             <div className="flex justify-between items-center">
-              <h3 className="text-base lowercase font-sans font-medium text-blue-600 dark:text-blue-300 underline group-hover:text-blue-800 transition-colors line-clamp-1">
+              <h3 className="text-base lowercase font-sans font-medium text-blue-600 dark:text-blue-500 underline transition-colors line-clamp-1">
                 {repo.name}
               </h3>
             </div>

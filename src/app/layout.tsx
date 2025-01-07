@@ -31,6 +31,11 @@ export default function RootLayout({
               </div>
             </div>
           </main>
+          <footer className="p-6 w-full justify-center flex space-x-4 dark:text-zinc-300 text-sm">
+            <a href="https://github.com/ryanyogan">Github</a>
+            <a href="https://linkedin.com/in/ryanyogan">LinkedIn</a>
+            <a href="https://twitter.com/ryanyogan">X</a>
+          </footer>
         </div>
         <Analytics />
         <SpeedInsights />

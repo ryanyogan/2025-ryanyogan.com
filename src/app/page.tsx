@@ -1,11 +1,11 @@
 import { RecentRepositories } from "@/components/recent-repositories";
 import { RecentWriting } from "@/components/recent-writing";
 import { getRecentRepos } from "@/lib/github";
-import { unstable_cacheLife as cacheLife } from "next/cache";
+// import { unstable_cacheLife as cacheLife } from "next/cache";
 
 export default async function Home() {
-  "use cache";
-  cacheLife("hours");
+  // "use cache";
+  // cacheLife("hours");
 
   const { repos: recentRepos } = await getRecentRepos(4);
 

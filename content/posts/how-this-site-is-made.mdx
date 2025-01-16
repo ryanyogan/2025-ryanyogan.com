@@ -1,0 +1,117 @@
+---
+title: 'How This Site is Made'
+date: '2025-01-01'
+excerpt: 'An in-depth look at the technologies and techniques used to build this site.'
+---
+
+# How This Site is Made
+
+Building this site involved several modern web development technologies and best practices. Here's a breakdown of the key components:
+
+## Framework
+
+This site is built using [Next.js](https://nextjs.org/), a powerful React framework that enables server-side rendering and static site generation.
+
+```typescript
+// filepath: /path/to/next.config.js
+module.exports = {
+  reactStrictMode: true,
+  // ...existing code...
+};
+```
+
+## Styling
+
+For styling, we use [Tailwind CSS](https://tailwindcss.com/), a utility-first CSS framework that allows for rapid UI development.
+
+```typescript
+// filepath: /path/to/tailwind.config.js
+module.exports = {
+  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+## TypeScript
+
+TypeScript is used throughout the codebase to ensure type safety and improve developer experience.
+
+```typescript
+// filepath: /path/to/tsconfig.json
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
+```
+
+## Data Fetching
+
+We use Next.js's data fetching methods to fetch data at build time or on each request.
+
+```typescript
+// filepath: /path/to/pages/index.tsx
+import { GetStaticProps } from 'next';
+
+export const getStaticProps: GetStaticProps = async () => {
+  // Fetch data from an API or database
+  const data = await fetchData();
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const HomePage = ({ data }) => {
+  return (
+    <div>
+      <h1>Welcome to the site</h1>
+      {/* Render data */}
+    </div>
+  );
+};
+
+export default HomePage;
+```
+
+## Deployment
+
+The site is deployed on [Vercel](https://vercel.com/), which provides seamless integration with Next.js for easy deployment and scaling.
+
+```typescript
+// filepath: /path/to/vercel.json
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@vercel/next"
+    }
+  ]
+}
+```
+
+By combining these technologies, we have created a fast, scalable, and maintainable website. If you have any questions or suggestions, feel free to reach out!

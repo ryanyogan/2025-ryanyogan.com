@@ -1,6 +1,5 @@
 import { Octokit } from "@octokit/rest";
 import { unstable_cacheLife as cacheLife } from "next/cache";
-import { cache } from "react";
 
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
@@ -19,7 +18,7 @@ export interface Language {
   count: number;
 }
 
-async function fetchAllRepos(): Promise<Repo[]> {
+export async function fetchAllRepos(): Promise<Repo[]> {
   "use cache";
   cacheLife("days");
 
@@ -59,25 +58,18 @@ async function fetchAllRepos(): Promise<Repo[]> {
   return allRepos;
 }
 
-export const getAllRepos = cache(async (): Promise<Repo[]> => {
-  return await fetchAllRepos();
-});
-
-export const getRecentRepos = async (
+export async function getRecentRepos(
   count: number
-): Promise<{ repos: Repo[]; totalCount: number }> => {
-  "use cache";
-  cacheLife("hours");
-
-  const allRepos = await getAllRepos();
+): Promise<{ repos: Repo[]; totalCount: number }> {
+  const allRepos = await fetchAllRepos();
   return {
     repos: allRepos.slice(0, count),
     totalCount: allRepos.length,
   };
-};
+}
 
-export const getLanguages = cache(async (): Promise<Language[]> => {
-  const repos = await getAllRepos();
+export async function getLangues(): Promise<Language[]> {
+  const repos = await fetchAllRepos();
   const languageCount: Record<string, number> = {};
 
   repos.forEach((repo) => {
@@ -89,4 +81,4 @@ export const getLanguages = cache(async (): Promise<Language[]> => {
   return Object.entries(languageCount)
     .map(([name, count]) => ({ name, count }))
     .sort((a, b) => b.count - a.count);
-});
+}

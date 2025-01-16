@@ -11,21 +11,22 @@ export default async function WritingPage() {
   const posts = await getWritingPosts();
 
   return (
-    <>
+    <div className="space-y-20">
       <section className="space-y-4">
-        <h2 className="sm:text-3xl text-2xl font-serif font-normal tracking-tight text-black pb-2">
-          From time-to-time,
-        </h2>
-        <p className="sm:text-base text-sm text-gray-700">
-          Appearntly I will write; however, this is most likely broken as I
-          decided to spend days on choosing the proper font... WHY!
+        <h2 className="text-3xl font-serif text-white">From time-to-time,</h2>
+        <p className="font-sans text-zinc-400">
+          I like to write about leadership, our industry, aviation and simming,
+          and random tutorials that I think are helpful.
         </p>
+
+        <div className="space-y-6 mt-10">
+          <div className="grid gap-x-8">
+            {posts.map((post) => (
+              <WritingPostCard key={post.date} post={post} />
+            ))}
+          </div>
+        </div>
       </section>
-      <div className="grid gap-8 md:grid-cols-2">
-        {posts.map((post) => (
-          <WritingPostCard key={post.slug} post={post} />
-        ))}
-      </div>
-    </>
+    </div>
   );
 }

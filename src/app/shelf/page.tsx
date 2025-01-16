@@ -1,7 +1,8 @@
 import { LanguageFilter } from "@/components/language-filter";
 import { Skeleton } from "@/components/ui/skeleton";
 import { WritingPostCard } from "@/components/writing-post-card";
-import { getAllRepos, getLanguages } from "@/lib/github";
+import { fetchAllRepos, getLangues } from "@/lib/github";
+import { unstable_cacheLife as cacheLife } from "next/cache";
 import { Suspense } from "react";
 
 export const metadata = {
@@ -10,7 +11,10 @@ export const metadata = {
 };
 
 export default async function ShelfPage() {
-  const [repos, languages] = await Promise.all([getAllRepos(), getLanguages()]);
+  "use cache";
+  cacheLife("days");
+
+  const [repos, languages] = await Promise.all([fetchAllRepos(), getLangues()]);
 
   const leadershipMaterial = [
     {
@@ -40,50 +44,44 @@ export default async function ShelfPage() {
   ];
 
   return (
-    <>
+    <div className="space-y-20">
       <section className="space-y-4">
-        <h2 className="sm:text-3xl text-2xl font-serif font-normal tracking-tight text-black pb-2">
-          Books First.
-        </h2>
+        <h2 className="text-3xl font-serif text-white">A Really Big Shelf</h2>
+        <p className="font-sans text-zinc-400 pb-10">
+          Here are some of the most up-to-date books that I find relevant on
+          leadership, and why not explore way too many github repositories and
+          languages that I tinker with.
+        </p>
+
         <div className="space-y-6">
-          <div className="grid md:grid-cols-2 md:col-span-full gap-x-8">
-            {leadershipMaterial.map((post) => (
-              <WritingPostCard
-                showDate={false}
-                useSlug={false}
-                key={post.href}
-                post={post}
-              />
-            ))}
+          <h2 className="text-2xl font-serif text-white relative inline-block">
+            <span className="relative z-10">Amazing Books & Videos</span>
+          </h2>
+          <div className="space-y-6">
+            <div className="grid">
+              <Suspense fallback={<Skeleton />}>
+                {leadershipMaterial.map((post) => (
+                  <WritingPostCard
+                    showDate={false}
+                    useSlug={false}
+                    key={post.href}
+                    post={post}
+                  />
+                ))}
+              </Suspense>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="space-y-4">
-        <h2 className="sm:text-3xl text-2xl font-serif font-normal tracking-tight text-black pb-2">
-          Github Languages & Projects
+      <section className="space-y-6">
+        <h2 className="text-2xl font-serif text-white relative inline-block">
+          <span className="relative z-10">The Source of Truth</span>
         </h2>
-        <Suspense fallback={<LanguageFilterSkeleton />}>
+        <Suspense fallback={<Skeleton />}>
           <LanguageFilter languages={languages} repos={repos} />
         </Suspense>
       </section>
-    </>
-  );
-}
-
-function LanguageFilterSkeleton() {
-  return (
-    <div className="space-y-6">
-      <div className="flex flex-wrap gap-2">
-        {[...Array(8)].map((_, i) => (
-          <Skeleton key={i} className="h-8 w-20 rounded-full" />
-        ))}
-      </div>
-      <div className="grid gap-4 sm:grid-cols-2">
-        {[...Array(6)].map((_, i) => (
-          <Skeleton key={i} className="h-32 rounded-lg" />
-        ))}
-      </div>
     </div>
   );
 }

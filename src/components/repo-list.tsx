@@ -1,16 +1,16 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Link from 'next/link'
-import { ArrowUpRight, Star, GitFork, Calendar } from 'lucide-react'
-import { Repo } from '@/lib/github'
+import { Repo } from "@/lib/github";
+import { ArrowUpRight, Calendar, GitFork, Star } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
 export function RepoList({ repos }: { repos: Repo[] }) {
-  const [visibleRepos, setVisibleRepos] = useState(30)
+  const [visibleRepos, setVisibleRepos] = useState(30);
 
   const loadMore = () => {
-    setVisibleRepos(prevVisible => prevVisible + 30)
-  }
+    setVisibleRepos((prevVisible) => prevVisible + 30);
+  };
 
   return (
     <div className="space-y-6">
@@ -21,16 +21,18 @@ export function RepoList({ repos }: { repos: Repo[] }) {
             href={repo.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block bg-gray-50 rounded-lg p-4 group hover:bg-gray-100 transition-colors"
+            className="block rounded-lg p-4 group hover:bg-zinc-800 border border-zinc-800 transition-colors"
           >
             <div className="flex justify-between items-start">
-              <h3 className="text-base font-serif font-normal text-gray-900 group-hover:text-gray-600 transition-colors line-clamp-1">
+              <h3 className="text-base font-serif font-normal text-zinc-400 transition-colors line-clamp-1">
                 {repo.name}
               </h3>
-              <ArrowUpRight className="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors flex-shrink-0" />
+              <ArrowUpRight className="w-4 h-4 text-zinc-400 transition-colors flex-shrink-0" />
             </div>
             {repo.description && (
-              <p className="mt-2 text-xs text-gray-600 line-clamp-2 font-sans">{repo.description}</p>
+              <p className="mt-2 text-xs text-zinc-500 line-clamp-2 font-sans">
+                {repo.description}
+              </p>
             )}
             <div className="mt-3 flex items-center space-x-4 text-xs text-gray-500 font-sans">
               {repo.language && (
@@ -50,9 +52,9 @@ export function RepoList({ repos }: { repos: Repo[] }) {
             </div>
             <div className="mt-2 text-xs text-gray-500 flex items-center font-sans">
               <Calendar className="w-3 h-3 mr-1" />
-              {repo.updatedAt 
+              {repo.updatedAt
                 ? `Updated on ${new Date(repo.updatedAt).toLocaleDateString()}`
-                : 'Update date unknown'}
+                : "Update date unknown"}
             </div>
           </Link>
         ))}
@@ -61,13 +63,12 @@ export function RepoList({ repos }: { repos: Repo[] }) {
         <div className="text-center">
           <button
             onClick={loadMore}
-            className="px-4 py-2 bg-gray-100 text-gray-800 text-xs rounded-md hover:bg-gray-200 transition-colors font-sans"
+            className="px-4 py-2 bg-gray-300 text-gray-800 text-xs rounded-md cursor-pointer hover:bg-gray-200 transition-colors font-sans"
           >
             Load More
           </button>
         </div>
       )}
     </div>
-  )
+  );
 }
-

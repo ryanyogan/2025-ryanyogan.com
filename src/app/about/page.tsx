@@ -6,82 +6,113 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <>
-      <div className="space-y-20">
-        <section className="space-y-4">
-          <h2 className="text-3xl font-serif text-gray-800 dark:text-zinc-50">
-            Hello I&apos;m Ryan,
-          </h2>
-          <p className="font-sans text-zinc-800 dark:text-zinc-400 tracking-tight">
-            As an Engineering Leader and Software Developer. I&apos;m passionate
-            about crafting exceptional user experiences, developing rock-solid
-            distributed services, and nurturing a dynamic team development.
-          </p>
-          <p className="font-sans text-zinc-800 dark:text-zinc-400 tracking-tight">
-            My leadership style is rooted in empathy, curiosity, and
-            cheerleading. I believe in the power of a growth mindset, and I
-            strive to create an environemnt where everyone may learn, thrive,
-            and have fun.
-          </p>
-          <p className="font-sans text-zinc-800 dark:text-zinc-400 tracking-tight">
-            My engineering approach is thatof a Technical Generalist,
-            recognizing the unique value each technology brings to the table. My
-            mission is to build and teach, leveraging my broad skill set to
-            innovate and 💡 inspire.
-          </p>
-        </section>
-        <section className="space-y-4">
-          <h2 className="text-3xl font-serif text-gray-800 dark:text-zinc-50">
-            Okay, here&apos;s what LLM&apos;s have to say about me...
-          </h2>
-          <p className="font-sans text-zinc-800 dark:text-zinc-400 tracking-tight">
-            Embarking on my tech journey with a 386 computer, I quickly became
-            the family IT department, graduating from building PCs to conjuring
-            AOL &quot;proggies&quot; in Visual Basic. My love affair with server
-            racks in chilly rooms was just the beginning, and my entry into
-            theater! Fast forward through a symphony of C#, PHP spells, and
-            Rails-powered rollercoasters, and you&apos;ll find me professing my
-            love for all things engineering.
-          </p>
-          <p className="font-sans text-zinc-800 dark:text-zinc-400 tracking-tight">
-            These days, I&apos;m crafting video game masterpieces in Rust—so
-            &quot;unique&quot; they&apos;re practically art, and hoarding
-            leadership books like they&apos;re going out of style. My toolkit? A
-            kaleidoscope of TypeScript frameworks so infamous, they dare not
-            speak their names.
-          </p>
-          <p className="font-sans text-zinc-800 dark:text-zinc-400 tracking-tight">
-            I&apos;ve navigated the startup scene from a cozy nook above a
-            Chicago bar to the dizzying heights of corporate skyscrapers, and I
-            love them all. Amidst a quirky relationship with Emacs and Clojure
-            (we&apos;re complicated), I find Zen in configuring Neovim more than
-            I do in housekeeping. I occasionally pine for the days of wrestling
-            with ColdFusion, Perl, and coaxing that last table and gif into
-            pixel-perfect harmony for IE6—ah, simpler times.
-          </p>
-          <p className="font-sans text-zinc-800 dark:text-zinc-400 tracking-tight">
-            My home doubles as an aircraft hangar, thanks to an obsession with
-            tinkering on aircrafts and simulators. I&apos;ve taken &quot;home
-            office&quot; to new altitudes, recreating a commercial flight
-            experience that&apos;s just one cranky passenger short of actual
-            takeoff.
-          </p>
-        </section>
-
-        <section className="space-y-4">
-          <h2 className="text-3xl font-serif text-gray-800 dark:text-zinc-50">
-            What matters most to me?
-          </h2>
-          <ul className="text-gray-800 dark:text-zinc-50">
-            <li>👨‍👩‍👦‍👦 is my love.</li>
-            <li>🛩 is my joy.</li>
-            <li>🎸 is my jam.</li>
-            <li>🐕 & 🐈‍⬛ pain in the ass.</li>
-            <li>🚙 detailing cars is my zen.</li>
-            <li>🏒 full-time ice dad.</li>
-          </ul>
-        </section>
-      </div>
-    </>
+    <div className="space-y-20">
+      <section className="space-y-4">
+        <h2 className="text-3xl font-serif text-white">
+          Okay, here&apos;s what LLM&apos;s have to say about me...
+        </h2>
+        <p className="font-sans text-zinc-400">
+          <span className="text-blue-400 block pb-1 text-lg">
+            Chapter 1: The Surge-Fueled Prodigy
+          </span>
+          Most kids grow up playing with toys. I grew up playing with AOL
+          proggies and breaking my dad’s computer. At 14, I wasn’t just coding—I
+          was revolutionizing the concept of “grungy” websites. My first clients
+          were bands that thought Comic Sans was edgy. I charged them $200 for
+          masterpieces so grunge you couldn’t tell where the text ended and the
+          background began. Nirvana vibes? You bet. Usable? Absolutely not. Art?
+          Hell yes. That was my first taste of entrepreneurship. While other
+          kids were figuring out how to sneak into R-rated movies, I was
+          figuring out how to make OGG files play on Winamp competitors I coded
+          from scratch. Did I know what I was doing? Nope. Did that stop me?
+          Also nope.
+          <br />
+          <br />
+          <span className="text-blue-400 block pb-1 text-lg">
+            Chapter 2: The Data Whisperer
+          </span>
+          As I got older, I transitioned from breaking personal computers to
+          breaking corporate ones—professionally, of course. Network operations
+          was my playground, and Windows NT was my best frenemy. There’s a
+          certain thrill to watching high-frequency trading systems crash and
+          being the only person in the room calm enough to fix it. One time, a
+          trader stormed into the server room screaming about losing millions. I
+          took a long sip of my coffee, typed three lines of code, and the
+          system roared back to life. He asked me how I did it, and I told him,
+          “With caffeine and spite.” He didn’t laugh, but I did.
+          <br />
+          <br />
+          <span className="text-blue-400 block pb-1 text-lg">
+            Chapter 3: Falling in Love with Ruby (and Other Languages .. JS lol)
+          </span>
+          I’ve always been a sucker for a good programming language. Perl was my
+          first crush, PHP was my messy rebound, and ColdFusion… well, we don’t
+          talk about ColdFusion. But Ruby? Ruby was different. Ruby wasn’t just
+          a language; Ruby was a lifestyle. She was elegant, she was logical,
+          and she didn’t yell at me when I made a mistake. I spent countless
+          nights coding with Ruby, a glass of whiskey in one hand and my
+          keyboard in the other. It wasn’t just coding—it was poetry. Of course,
+          I’ve dabbled in others since then: Go, Elixir, Rust, even Zig (because
+          who doesn’t love a little chaos?). But Ruby? Ruby was my first true
+          love.
+          <br />
+          <br />
+          <span className="text-blue-400 block pb-1 text-lg">
+            Chapter 4: Planes, Trains, and Debugging Automobiles
+          </span>
+          At some point, I decided that fixing computers wasn’t enough. I wanted
+          to fix everything: data platforms, real-time systems, route planning
+          for vehicles, you name it. There was this one time I convinced a room
+          full of grizzled drivers that their logistics system could be as smart
+          as a Boeing 737’s flight management system. They laughed—until I built
+          it. Now, I don’t want to say I saved the transportation industry, but
+          I will say I made a lot of drivers very happy. And if you’ve ever seen
+          a truck driver smile, you know that’s no small feat.
+          <br />
+          <br />
+          <span className="text-blue-400 block pb-1 text-lg">
+            Chapter 5: Serverless and Sleepless
+          </span>
+          If you’ve never explained serverless architecture to someone who
+          thinks “the cloud” is where birds live, you haven’t truly lived. I
+          spent months convincing people that we could ditch half the codebase
+          and still make everything run faster. It worked, of course, because
+          I’m very good at what I do. The best part? I got to call up AWS
+          engineers and say, “Hey, your Lambda instances are great, but what if
+          they were better?” They didn’t hang up, which I think is a testament
+          to my charm.
+          <br />
+          <br />
+          <span className="text-blue-400 block pb-1 text-lg">
+            Chapter 6: Debugging Life Outside of work
+          </span>
+          I’m just a guy who likes planes, cars, and breaking things so I can
+          fix them again. I trained to fly real airplanes, but my eyes had other
+          plans, so now I stick to simulators. I also build off-road vehicles
+          because nothing says “relaxation” like tearing through mud at 40 mph.
+          I’ve coded in every language you’ve heard of (and a few you haven’t),
+          led teams, built systems, and occasionally yelled at TypeScript like
+          it owes me money. My hobbies include finding obscure bugs, pretending
+          to understand Rust, and convincing my kids that debugging is a sport.
+          <br />
+          <br />
+          <span className="text-blue-400 block pb-1 text-lg">
+            Epilogue: The Final Debug
+          </span>
+          If there’s one thing I’ve learned in life, it’s that
+          everything—systems, cars, life itself—is just one big debugging
+          problem. And if you approach it with enough coffee, sarcasm, and
+          stubborn determination, you can fix anything. Or at least make it look
+          like it’s working. So here I am: part technologist, part tinkerer,
+          part chaos coordinator. Life’s a mess, and I wouldn’t have it any
+          other way.
+          <br />
+          <small>
+            (Cue credits: Ryan sipping coffee, coding furiously, and smiling
+            smugly as servers hum triumphantly in the background.)
+          </small>
+        </p>
+      </section>
+    </div>
   );
 }

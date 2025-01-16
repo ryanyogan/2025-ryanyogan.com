@@ -3,7 +3,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { GeistSans } from "geist/font/sans";
 
-import { NameTitle } from "@/components/name-title";
+import { Navigation } from "@/components/navigation";
 import "@/styles/globals.css";
 
 export const metadata = {
@@ -19,19 +19,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.className}`}>
-      <body className="font-sans bg-zinc-50 dark:bg-zinc-900 antialiased">
+      <body className="font-sans bg-zinc-900 antialiased">
         <div className="max-w-3xl mx-auto px-4">
           <main className="mt-6 mb-24">
             <div className="container-wide">
               <div className="space-y-24">
                 <div className="space-y-12">
-                  <NameTitle />
+                  <div className="flex flex-row justify-start pb-4">
+                    <Navigation />
+                  </div>
                   {children}
                 </div>
               </div>
             </div>
           </main>
-          <footer className="p-6 w-full justify-center flex space-x-4 dark:text-zinc-300 text-sm">
+          <footer className="p-6 w-full justify-center flex space-x-4 text-zinc-200 text-sm">
             <a href="https://github.com/ryanyogan">Github</a>
             <a href="https://linkedin.com/in/ryanyogan">LinkedIn</a>
             <a href="https://twitter.com/ryanyogan">X</a>

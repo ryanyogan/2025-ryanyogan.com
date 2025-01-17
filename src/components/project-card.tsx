@@ -13,7 +13,7 @@ export function ProjectCard(props: ProjectCardProps) {
     <article className="group pb-6 max-w-3xl">
       <a href={props.project.href} className="flex flex-col">
         <div className="flex justify-between items-center pb-1">
-          <h3 className="font-sans text-[15px] text-blue-400 underline underline-offset-2 transition-colors line-clamp-1">
+          <h3 className="font-sans text-[15px] text-sky-500 underline underline-offset-2 transition-colors line-clamp-1">
             {props.project.title}
           </h3>
         </div>

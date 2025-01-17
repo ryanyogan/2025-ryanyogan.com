@@ -1,5 +1,4 @@
 import { WritingPostCard } from "@/components/writing-post-card";
-import { getWritingPosts } from "@/lib/writing";
 
 export const metadata = {
   title: "Writing | Ryan Yogan",
@@ -8,7 +7,36 @@ export const metadata = {
 };
 
 export default async function WritingPage() {
-  const posts = await getWritingPosts();
+  const posts = [
+    {
+      id: "1",
+      title: "Hello, World!",
+      date: "2021-09-01",
+      excerpt: "This is the first post on my new blog.",
+      slug: "hello-world",
+    },
+    {
+      id: "2",
+      title: "Future of the Web",
+      date: "2021-09-15",
+      excerpt: "A look at what the future of the web might look like.",
+      slug: "future-of-web-development",
+    },
+    {
+      id: "3",
+      title: "How I Built This Site",
+      date: "2021-10-01",
+      excerpt: "A look at the technology stack I use for my projects.",
+      slug: "how-this-site-is-made",
+    },
+    {
+      id: "4",
+      title: "2025 I Write",
+      date: "2021-10-15",
+      excerpt: "A look at what the future of the web might look like.",
+      slug: "2025-i-write",
+    },
+  ];
 
   return (
     <div className="space-y-20">
